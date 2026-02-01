@@ -1,5 +1,7 @@
 # Week 4 Lab: Collaborative Drawing Board (WebSocket Application)
 
+> **Note:** This is an ungraded activity.
+
 This exercise walks you through a real-time collaborative drawing application built with WebSockets and Node.js. You will run the application locally, explore how the server and client communicate over a persistent WebSocket connection, and observe the WebSocket concepts covered in the Week 4 lecture in working code.
 
 ---
