@@ -1,0 +1,177 @@
+/* ===== RESET DEFAULT STYLES ===== */
+/* Remove default margins/paddings and use better box model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding/border in width/height */
+}
+
+/* ===== BODY STYLING ===== */
+body {
+    font-family: Arial, sans-serif;
+    /* Beautiful gradient background */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh; /* Full viewport height */
+    /* Center the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.container {
+    background: white;
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    /* Nice shadow effect for depth */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== HEADER SECTION ===== */
+.header {
+    display: flex;
+    justify-content: space-between; /* Title on left, status on right */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Main title */
+h1 {
+    color: #333;
+    font-size: 24px;
+}
+
+/* Status indicators container */
+.status {
+    display: flex;
+    gap: 20px; /* Space between status items */
+    align-items: center;
+}
+
+/* ===== CONNECTION STATUS INDICATOR ===== */
+#connection-status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease; /* Smooth color transition */
+}
+
+/* Green when connected */
+.connected {
+    background: #4caf50;
+    color: white;
+}
+
+/* Red when disconnected */
+.disconnected {
+    background: #f44336;
+    color: white;
+}
+
+/* User count display */
+#user-count {
+    color: #666;
+    font-weight: bold;
+}
+
+/* ===== DRAWING CONTROLS ===== */
+.controls {
+    display: flex;
+    gap: 15px; /* Space between controls */
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #f5f5f5;
+    border-radius: 5px;
+}
+
+/* Color picker styling */
+#color-picker {
+    width: 50px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Brush size slider */
+#brush-size {
+    width: 150px;
+}
+
+/* Brush size display text */
+#brush-size-display {
+    color: #666;
+    font-weight: bold;
+    min-width: 40px; /* Prevent layout shift */
+}
+
+/* Clear button */
+#clear-btn {
+    padding: 8px 16px;
+    background: #ff5722; /* Orange color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+/* Clear button hover effect */
+#clear-btn:hover {
+    background: #e64a19; /* Darker orange on hover */
+}
+
+/* ===== DRAWING CANVAS ===== */
+#drawing-canvas {
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    cursor: crosshair; /* Show crosshair cursor for drawing */
+    display: block;
+    background: white;
+}
+
+/* ===== INFO PANEL ===== */
+.info {
+    margin-top: 20px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Info panel paragraphs */
+.info p {
+    margin: 5px 0;
+}
+
+/* Info panel values (bold) */
+.info span {
+    font-weight: bold;
+    color: #333;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+/* Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .controls {
+        flex-wrap: wrap;
+    }
+    
+    #drawing-canvas {
+        max-width: 100%;
+        height: auto;
+    }
+}

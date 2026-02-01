@@ -1,0 +1,17 @@
+# Dependencies - don't upload these, Azure will install them
+node_modules/
+
+# Environment variables - keep secrets safe
+.env
+
+# Log files - not needed in repository
+*.log
+npm-debug.log*
+
+# OS files - Mac/Windows system files
+.DS_Store
+Thumbs.db
+
+# IDE files - editor-specific settings
+.vscode/
+.idea/

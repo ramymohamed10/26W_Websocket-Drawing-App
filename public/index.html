@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative Drawing Board</title>
+    <!-- Link to our CSS file for styling -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main container for our application -->
+    <div class="container">
+        
+        <!-- Header section with title and connection status -->
+        <div class="header">
+            <h1>Collaborative Drawing Board</h1>
+            
+            <!-- Status indicators -->
+            <div class="status">
+                <!-- Shows if we're connected to the WebSocket server -->
+                <span id="connection-status" class="disconnected">Disconnected</span>
+                <!-- Shows how many users are drawing together -->
+                <span id="user-count">Users: 0</span>
+            </div>
+        </div>
+        
+        <!-- Drawing controls (color, brush size, clear) -->
+        <div class="controls">
+            <!-- HTML5 color picker for selecting drawing color -->
+            <input type="color" id="color-picker" value="#000000">
+            
+            <!-- Slider for brush size (1px to 20px) -->
+            <input type="range" id="brush-size" min="1" max="20" value="3">
+            <span id="brush-size-display">3px</span>
+            
+            <!-- Button to clear the entire canvas -->
+            <button id="clear-btn">Clear Canvas</button>
+        </div>
+        
+        <!-- The actual drawing canvas -->
+        <!-- We'll use JavaScript to draw on this -->
+        <canvas id="drawing-canvas"></canvas>
+        
+        <!-- Information panel showing technical details -->
+        <div class="info">
+            <!-- Shows the WebSocket URL we're connecting to -->
+            <p>WebSocket URL: <span id="ws-url"></span></p>
+            <!-- Counter for how many messages we've sent -->
+            <p>Messages sent: <span id="message-count">0</span></p>
+        </div>
+    </div>
+    
+    <!-- Load our JavaScript file last so the page loads first -->
+    <script src="app.js"></script>
+</body>
+</html>
